@@ -8,7 +8,13 @@
     background-image: url(/img/橫幅.png);
     width: 1920px;
     height: 1280px;
-    object-fit: contain;
+    display: grid;
+    align-items: center;
+
+    img{
+        margin: 0 auto;
+    }
+
 }
 
 nav{
@@ -29,15 +35,29 @@ nav{
     #link{
         display: grid;
         grid-template-columns: repeat(3,1fr);
+        align-items: flex-end;
 
         a{
             font-size: 18px;
             font-weight: 100;
+            &:nth-child(2){
+                text-align: center;
+            }
+            &:nth-child(3){
+                text-align: right;
+            }
+
+
         }
     
     }
     #social{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+        align-items: flex-end;
+        
+        a:nth-child(2){
+            text-align: right;
+        }
     }
 }
